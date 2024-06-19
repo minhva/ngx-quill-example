@@ -7,6 +7,10 @@ import Quill from 'quill'
 import ImageResizor from 'quill-image-resizor'
 Quill.register('modules/imageResizor', ImageResizor)
 
+import htmlEditButton from "quill-html-edit-button";
+Quill.register(  'modules/htmlEditButton', htmlEditButton);
+
+
 import hljs from 'highlight.js'
 
 @Component({
@@ -26,6 +30,7 @@ export class FormulaComponent {
     this.modules = {
       syntax: { hljs },
       imageResizor: {},
+      htmlEditButton: {},
       toolbar: [['formula'], ['code-block'], ['image']]
     }
   }
