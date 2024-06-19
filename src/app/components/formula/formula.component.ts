@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core'
 import { FormsModule } from '@angular/forms'
-import { QuillEditorComponent } from 'ngx-quill'
+import {QuillEditorComponent, QuillViewHTMLComponent} from 'ngx-quill'
 
 import Quill from 'quill'
 
@@ -14,7 +14,7 @@ Quill.register(  'modules/htmlEditButton', htmlEditButton);
 import hljs from 'highlight.js'
 
 @Component({
-  imports: [QuillEditorComponent, FormsModule],
+  imports: [QuillEditorComponent, FormsModule, QuillViewHTMLComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   selector: 'app-formula',
   standalone: true,
